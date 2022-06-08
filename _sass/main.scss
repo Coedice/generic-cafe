@@ -1,0 +1,56 @@
+* {
+  color: $foreground-color;
+  font-family: $body-font;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+#banner {
+  height: 85%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  > video {
+    object-fit: cover;
+    width: 100%;
+    min-height: 100%;
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+  }
+}
+
+p, li:not(nav) {
+  font-size: 1.2em;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: $background-color;
+}
+
+p#footer {
+  font-size: small;
+  position: relative;
+  bottom: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+div#main {
+  width: 80%;
+  padding-bottom: 60px;
+  margin: 0 auto 0 auto;
+  position: relative;
+  min-height: calc(100% - 60px - 20px);
+}

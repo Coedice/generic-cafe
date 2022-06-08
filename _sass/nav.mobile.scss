@@ -1,0 +1,25 @@
+$nav_bar_height_mobile: 60px;
+
+nav {
+  height: $nav_bar_height_mobile;
+  overflow-x: scroll;
+  white-space: nowrap;
+
+  > a {
+	display: none;
+  }
+
+  > ul {
+	float: left;
+
+	> li {
+	  display: inline-block;
+	  margin-right: 10px;
+	  margin-left: 10px;
+
+	  a {
+		padding: 0 10px;
+	  }
+	}
+  }
+}

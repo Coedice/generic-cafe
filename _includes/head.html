@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<!-- Analytics-->
+{% if jekyll.environment == "production" %}
+	{% include gtag.html %}
+{% endif %}
+
+<!-- Generic -->
+<meta name="language" content="english">
+<meta name="copyright" content="{{ site.author }}">
+<meta name="author" content="{{ site.author }}">
+
+<!-- SEO -->
+<title>{{ site.data.brand.name }} - {{ page.title }}</title>
+<link rel="canonical" href="{{ page.url }}">
+<meta name="description" content="{{ site.data.brand.description }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:locale" content="{{ site.data.contact.location.locale }}">
+<meta property="og:description" content="{{ site.data.brand.description }}">
+<meta property="og:url" content="{{ page.url }}">
+<meta property="og:site_name" content="{{ site.data.brand.name }}">
+<meta property="og:type" content="website">
+{% include icons.html %}
+
+<!-- Styles -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1c1c1c">
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- Scripts -->
+<script src="/assets/scripts/turbolinks.js"></script>

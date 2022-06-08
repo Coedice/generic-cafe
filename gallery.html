@@ -1,0 +1,12 @@
+---
+title: Gallery
+layout: default
+---
+<div id="gallery">
+	{% for gallery_item in site.data.gallery.gallery %}
+		<div>
+			<img src="assets/images/gallery/{{ forloop.index }}.webp" alt="{{ gallery_item.description }}" title="{{ gallery_item.description }}">
+			<p>{{ gallery_item.description }}</p>
+		</div>
+	{% endfor %}
+</div>

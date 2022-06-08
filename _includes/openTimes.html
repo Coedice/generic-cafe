@@ -1,0 +1,6 @@
+<div class="openingTimes">
+  {% for day_of_week in site.data.openingTimes.times %}
+    <p>{{ day_of_week.days }}:</p>
+    <p>{{ day_of_week.open }} - {{ day_of_week.close }}</p>
+  {% endfor %}
+</div>

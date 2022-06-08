@@ -1,0 +1,21 @@
+timezone: Australia/Melbourne
+permalink: /:title
+
+author: Gavin Douch
+author_url: https://gavindou.ch
+
+plugins:
+  - jekyll-sitemap
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
+
+sass:
+  style: compressed

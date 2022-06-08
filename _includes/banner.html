@@ -1,0 +1,20 @@
+{% if page.banner %}
+	<div id="banner">
+		<video autoplay loop muted poster="/assets/images/banners/{{ page.banner }}.webp">
+			<source src="/assets/images/banners/{{ page.banner }}.webm" type="video/webm">
+			<source src="/assets/images/banners/{{ page.banner }}.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	<script>
+		function scrollUpdate() {
+			if (document.getElementById("banner") != null) {  /* Required for Turbolinks */
+				document.getElementsByTagName("nav")[0].id = this.scrollY > 0 ? "scrolled" : "";
+			}
+		}
+
+		window.addEventListener("scroll", scrollUpdate, false);
+	</script>
+{% else %}
+	<div style="height: 105px"></div>
+{% endif %}

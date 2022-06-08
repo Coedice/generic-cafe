@@ -1,0 +1,52 @@
+---
+title: Menu
+layout: default
+---
+<div id="menu">
+	{% assign has_vegan = false %}
+	{% assign has_gluten_free = false %}
+
+	{% for menu in site.data.menu.menus %}
+		{% unless forloop.first %}
+			<hr>
+		{% endunless %}
+		<h1>{{ menu.title | upcase }}</h1>
+		<p>{{ menu.time }}</p>
+		<div id="{{ menu.title }}">
+			{% for food in menu.foods %}
+				<div>
+					<h2>{{ food.name }}
+						<span>${{ food.price }}</span>
+						{% if food.vegan %}
+							{% assign has_vegan = true %}
+							<img src="assets/images/menu/diet/vegan.png" class="dietIcon" title="Vegan" alt="Vegan">
+						{% endif %}
+						{% if food.gluten_free %}
+							{% assign has_gluten_free = true %}
+							<img src="assets/images/menu/diet/glutenFree.png" class="dietIcon" title="Gluten free" alt="Gluten free">
+						{% endif %}
+					</h2>
+					<p>{{ food.description }}</p>
+					{% if food.options.size > 0 %}
+						<ul>
+							{% for option in food.options %}
+								<li>{{ option.name }}<span>${{ option.price }}</span></li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+					<img src="assets/images/menu/{{ food.name | slugify }}.webp" alt="{{ food.name }}">
+				</div>
+			{% endfor %}
+		</div>
+	{% endfor %}
+</div>
+{% if has_vegan or has_gluten_free %}
+	<div id="menuKey">
+		{% if has_vegan %}
+			Vegan <img src="assets/images/menu/diet/vegan.png" class="dietIcon" title="Vegan" alt="Vegan">
+		{% endif %}
+		{% if has_gluten_free %}
+			Gluten free <img src="assets/images/menu/diet/glutenFree.png" class="dietIcon" title="Gluten free" alt="Gluten free">
+		{% endif %}
+	</div>
+{% endif %}

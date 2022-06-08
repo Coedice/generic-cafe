@@ -1,0 +1,10 @@
+---
+title: Home
+layout: default
+banner: coffeePour
+---
+<p>{{ site.data.brand.description }}{% unless site.data.production.official %} This website is not the official website of {{ site.data.brand.name }}, it is a demo.{% endunless %}</p>
+{% include reviews.html %}
+{% include map.html %}
+{% include openTimes.html %}
+{% include socials.html %}

@@ -1,0 +1,7 @@
+<div id="socialsList">
+	{% for social_account in site.data.contact.socials %}
+		<a href="{{ social_account.link }}" target="_blank">
+			<img src="assets/images/social/{{ social_account.platform | downcase }}.svg" alt="{{ social_account.platform }} icon">
+		</a>
+	{% endfor %}
+</div>

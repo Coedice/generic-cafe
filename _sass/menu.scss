@@ -1,0 +1,104 @@
+#menu {
+  > h1 {
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 0;
+
+	&:not(:first-child) {
+	  margin-top: 40px;
+	}
+  }
+
+  hr {
+	border-style: solid;
+	color: transparentize($foreground-color, 0.7) ;
+	border-width: 0.5px;
+  }
+
+  > p {
+	text-align: center;
+	margin-top: 0;
+	color: $accent_color;
+  }
+
+  > div { // Foods list
+	display: grid;
+	row-gap: 20px;
+	column-gap: 70px;
+	grid-template-columns: repeat(2, 1fr);
+
+	> div { // Food item
+	  position: relative;
+	  padding: 10px;
+	  border-radius: $border-radius;
+	  border: 2px transparent solid;
+	  line-height: 0;
+
+	  &:hover {
+		border: 2px $accent-color solid;
+
+		> img {
+		  max-height: 200px;
+		}
+	  }
+
+	  > img {
+		width: 100%;
+		margin-top: 10px;
+		max-height: 0;
+		transition: max-height 0.2s;
+		border-radius: $border-radius;
+		object-fit: cover;
+	  }
+
+	  > h2 {
+		font-size: larger;
+		margin-top: 0;
+		margin-bottom: 5px;
+		line-height: 26px;
+
+		span {
+		  position: absolute;
+		  right: 0;
+		  padding-right: 10px;
+		}
+	  }
+
+	  > p {
+		margin-top: 5px;
+		font-size: medium;
+		margin-bottom: 0;
+		line-height: 22px;
+	  }
+
+	  > ul {
+		padding: 0;
+		margin-top: 5px;
+		margin-bottom: 0;
+		line-height: 18px;
+
+		li {
+		  display: block;
+		  font-size: small;
+
+		  span {
+			position: absolute;
+			right: 0;
+			padding-right: 10px;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+#menuKey {
+  margin-top: 50px;
+  font-size: larger;
+}
+
+.dietIcon {
+  display: inline;
+  vertical-align: baseline;
+  height: 1em;
+}

@@ -1,0 +1,14 @@
+location:
+  address: X Location St, City, State, Country
+  google_maps: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.808975176893!2d144.9651933152148!3d-37.81794314205539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b6bb2ad6c3%3A0x81524da322c3d6d5!2sFlinders%20Street%20Railway%20Station%20Police%20Booth!5e0!3m2!1sen!2sau!4v1654361982938!5m2!1sen!2sau
+  locale: en-AU
+
+socials:
+  - platform: Facebook
+    link: https://www.facebook.com/example
+  - platform: Instagram
+    link: https://www.instagram.com/example
+  - platform: email
+    link: mailto:example@example.com
+  - platform: phone
+    link: tel:xxxxxxxxxx

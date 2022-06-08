@@ -1,0 +1,18 @@
+.openingTimes {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  margin-top: 20px;
+
+  p {
+	margin: 0;
+
+	&:nth-child(2n + 1) {
+	  font-weight: bold;
+	  color: $accent_color;
+	}
+
+	&:nth-child(2n) {
+	  margin-left: 10px;
+	}
+  }
+}

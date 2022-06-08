@@ -1,0 +1,16 @@
+reviews:
+  - title: Great Café
+    username: John Doe
+    message: Loved the coffee and the views. I'll be coming back!
+    link: https://example.com/1
+    stars: 5
+  - title: Brilliant!
+    username: Jane Doe
+    message: Staff were exceptional and the breakfast was lovely.
+    link: https://example.com/2
+    stars: 5
+  - title: Friendly staff
+    username: Smith Doe
+    message: I have never seen a better looking café, and the staff were so friendly. I'm so glad I live nearby.
+    link: https://example.com/3
+    stars: 5
