@@ -1,7 +1,7 @@
 {% if page.banner %}
 	<div id="banner">
 		{% assign banner_path = "/assets/images/banners/" %}
-		<video autoplay loop muted poster="{{ banner_path | append: page.banner | append: '.webp' | relative_url }}">
+		<video autoplay loop muted playsinline poster="{{ banner_path | append: page.banner | append: '.webp' | relative_url }}">
 			<source src="{{ banner_path | append: page.banner | append: '.webm' | relative_url }}" type="video/webm">
 			<source src="{{ banner_path | append: page.banner | append: '.mp4' | relative_url }}" type="video/mp4">
 			Your browser does not support the video tag.
