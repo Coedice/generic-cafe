@@ -1,22 +1,25 @@
 {% comment %} Generated at http://faviconit.com/en {% endcomment %}
-{% assign nonce = site.time | date: "%y%-m%-d%H%M%S"%}
-<link rel="shortcut icon" href="/assets/images/favicons/favicon.ico?v={{ nonce }}">
-<link rel="icon" sizes="16x16 32x32 64x64" href="/assets/images/favicons/favicon.ico?v={{ nonce }}">
-<link rel="icon" type="image/png" sizes="196x196" href="/assets/images/favicons/favicon-192.png?v={{ nonce }}">
-<link rel="icon" type="image/png" sizes="160x160" href="/assets/images/favicons/favicon-160.png?v={{ nonce }}">
-<link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicons/favicon-96.png?v={{ nonce }}">
-<link rel="icon" type="image/png" sizes="64x64" href="/assets/images/favicons/favicon-64.png?v={{ nonce }}">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32.png?v={{ nonce }}">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16.png?v={{ nonce }}">
-<link rel="apple-touch-icon" href="/assets/images/favicons/favicon-57.png?v={{ nonce }}">
-<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicons/favicon-114.png?v={{ nonce }}">
-<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicons/favicon-72.png?v={{ nonce }}">
-<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicons/favicon-144.png?v={{ nonce }}">
-<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/favicon-60.png?v={{ nonce }}">
-<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicons/favicon-120.png?v={{ nonce }}">
-<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/favicon-76.png?v={{ nonce }}">
-<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicons/favicon-152.png?v={{ nonce }}">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/favicon-180.png?v={{ nonce }}">
-<meta name="msapplication-TileColor" content="#FFFFFF">
-<meta name="msapplication-TileImage" content="/assets/images/favicons/favicon-144.png?v={{ nonce }}">
-<meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+{% assign icons_path = "/assets/images/favicons/" %}
+{% assign date_string = site.time | date: "%y%-m%-d%H%M%S" %}
+{% assign nonce = "?v=" | append: date_string %}
+
+<link rel="shortcut icon" href="{{ icons_path | append: 'favicon.ico' | append: nonce | relative_url }}">
+<link rel="icon" sizes="16x16 32x32 64x64" href="{{ icons_path | append: 'favicon.ico' | append: nonce | relative_url }}">
+<link rel="icon" type="image/png" sizes="196x196" href="{{ icons_path | append: 'favicon-192.png' | append: nonce | relative_url }}">
+<link rel="icon" type="image/png" sizes="160x160" href="{{ icons_path | append: 'favicon-160.png' | append: nonce | relative_url }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ icons_path | append: 'favicon-96.png' | append: nonce | relative_url }}">
+<link rel="icon" type="image/png" sizes="64x64" href="{{ icons_path | append: 'favicon-64.png' | append: nonce | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ icons_path | append: 'favicon-32.png' | append: nonce | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ icons_path | append: 'favicon-16.png' | append: nonce | relative_url }}">
+<link rel="apple-touch-icon" href="{{ icons_path | append: 'favicon-57.png' | append: nonce | relative_url }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ icons_path | append: 'favicon-114.png' | append: nonce | relative_url }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ icons_path | append: 'favicon-72.png' | append: nonce | relative_url }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ icons_path | append: 'favicon-114.png' | append: nonce | relative_url }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ icons_path | append: 'favicon-60.png' | append: nonce | relative_url }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ icons_path | append: 'favicon-120.png' | append: nonce | relative_url }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ icons_path | append: 'favicon-76.png' | append: nonce | relative_url }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ icons_path | append: 'favicon-152.png' | append: nonce | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ icons_path | append: 'favicon-180.png' | append: nonce | relative_url }}">
+<meta name="msapplication-TileColor" content="{{ site.data.brand.accent_color }}">
+<meta name="msapplication-TileImage" content="{{ icons_path | append: 'favicon-114.png' | append: nonce | relative_url }}">
+<meta name="msapplication-config" content="{{ icons_path | append: 'browserconfig.xml' | relative_url }}">
