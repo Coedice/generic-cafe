@@ -36,6 +36,7 @@ $border-radius: 10px;
 @import "menu";
 
 @media only screen and (max-width: 480pt) { /* Mobile */
+  @import "main.mobile";
   @import "nav.mobile";
   @import "reviews.mobile";
   @import "gmap.mobile";
