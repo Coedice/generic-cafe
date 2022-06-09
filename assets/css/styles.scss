@@ -1,37 +1,26 @@
 ---
 ---
+
 // Color themes
-{% if site.data.brand.color_theme == "light" %}
-  $foreground-color: black;
-  $background-color: #eeeeee;
-  $transparent-nav-bar-text-color: #eeeeee;
-{% elsif site.data.brand.color_theme == "dark" %}
-  $foreground-color: white;
-  $background-color: #111111;
-  $transparent-nav-bar-text-color: white;
-{% elsif site.data.brand.color_theme == "pink" %}
-  $foreground-color: black;
-  $background-color: #e2dbdd;
-  $transparent-nav-bar-text-color: #e2dbdd;
-{% endif %}
+{% for color_theme in site.data.themes.color_themes %}
+  {% if color_theme.name == site.data.brand.color_theme %}
+    $foreground-color: {{ color_theme.foreground_color }};
+    $background-color: {{ color_theme.background_color }};
+    $transparent-nav-bar-text-color: {{ color_theme.transparent_nav_bar_text_color }};
+  {% endif %}
+{% endfor %}
 
 // Font themes
-{% if site.data.brand.font_theme == "futuristic" %}
-  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
-  $title-font: "Red Hat Display", "Century Gothic", Futura, "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  $body-font: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-{% elsif site.data.brand.font_theme == "rustic" %}
-  @import url('https://fonts.googleapis.com/css2?family=Condiment&display=swap');
-  $title-font: Condiment, "Brush Script MT", cursive;
-  $body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-{% elsif site.data.brand.font_theme == "cursive" %}
-  @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-  $title-font: Cookie, "Brush Script MT", cursive;
-  $body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-{% elsif site.data.brand.font_theme == "formal" %}
-  $title-font: Georgia, "Times New Roman", serif;
-  $body-font: "Helvetica Neue", Helvetica, Arial, serif;
-{% endif %}
+{% for font_theme in site.data.themes.font_themes %}
+  {% if font_theme.name == site.data.brand.font_theme %}
+    {% if font_theme.font_url %}
+      @import url({{ font_theme.font_url }});
+    {% endif %}
+
+    $title-font: {{ font_theme.title_font }};
+    $body-font: {{ font_theme.body_font }};
+  {% endif %}
+{% endfor %}
 
 $accent-color: {{ site.data.brand.accent_color }};
 $opacity: 0.3;
