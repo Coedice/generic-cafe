@@ -1,9 +1,7 @@
 <meta charset="UTF-8">
 
 <!-- Analytics-->
-{% if jekyll.environment == "production" %}
-	{% include gtag.html %}
-{% endif %}
+{% include gtag.html %}
 
 <!-- Generic -->
 <meta name="language" content="english">
@@ -12,6 +10,9 @@
 
 <!-- SEO -->
 <title>{{ site.data.brand.name }} - {{ page.title }}</title>
+{% if site.data.production.demo %}
+	<meta name="robots" content="noindex,nofollow">
+{% endif %}
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <meta name="description" content="{{ site.data.brand.description }}">
 <meta property="og:title" content="{{ page.title }}">

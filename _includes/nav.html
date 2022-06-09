@@ -1,7 +1,7 @@
 <nav {% if page.banner %}{% else %}id="scrolled"{% endif %}>
 	<a id="title" href="{{ '/' | relative_url }}" tabindex="0">
 		<img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="{{ site.data.brand.name }} logo">
-		<span>{{ site.data.brand.name }}{% unless site.data.production.official %} - Unofficial{% endunless %}</span>
+		<span>{{ site.data.brand.name }}{% if site.data.production.demo %} - Unofficial{% endif %}</span>
 	</a>
 	<ul>
 		{% for navigation_page in site.data.navigation.pages %}

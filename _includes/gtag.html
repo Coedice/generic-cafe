@@ -1,4 +1,4 @@
-{% if site.data.production.gtag %}
+{% if jekyll.environment == "production" and site.data.production.demo == false and site.data.production.gtag %}
 	<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.production.gtag }}"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
