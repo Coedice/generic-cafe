@@ -1,6 +1,6 @@
 <div id="reviews">
 	{% for review in site.data.reviews.reviews %}
-		<a href="{{ review.link }}" target="_blank">
+		<a href="{{ review.link }}" target="_blank" rel="noopener">
 			<h2>{{ review.title }}</h2>
 			<p class="username">&mdash; {{ review.username }}</p>
 			<span class="stars">
