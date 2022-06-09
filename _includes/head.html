@@ -24,7 +24,11 @@
 
 <!-- Styles -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#1c1c1c">
+{% for color_theme in site.data.themes.color_themes %}
+	{% if color_theme.name == site.data.brand.color_theme %}
+		<meta name="theme-color" content="{{ color_theme.background_color }}">
+	{% endif %}
+{% endfor %}
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 
 <!-- Scripts -->
