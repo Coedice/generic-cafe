@@ -32,7 +32,7 @@
       box-sizing: border-box;
     }
 
-    &:hover {
+    &:hover, &:active {
       p {
         opacity: 1;
       }
