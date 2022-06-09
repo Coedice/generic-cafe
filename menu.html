@@ -14,7 +14,7 @@ layout: default
 		<p>{{ menu.time }}</p>
 		<div id="{{ menu.title }}">
 			{% for food in menu.foods %}
-				<div>
+				<div onclick=""> <!-- onclick lets iOS recognise hover events -->
 					<h2>{{ food.name }}
 						<span>${{ food.price }}</span>
 						{% if food.vegan %}
