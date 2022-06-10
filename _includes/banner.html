@@ -2,31 +2,26 @@
 	{% assign banner_path = "/assets/images/banners/" %}
 	<video id="banner" autoplay loop muted playsinline poster="{{ banner_path | append: page.banner | append: '.webp' | relative_url }}">
 		<source src="{{ banner_path | append: page.banner | append: '.webm' | relative_url }}" type="video/webm">
-		<source src="{{ banner_path | append: page.banner | append: '.mp4' | relative_url }}" type="video/mp4"> <!-- Fallback for Safari -->
+		<source src="{{ banner_path | append: page.banner | append: '.mp4' | relative_url }}" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
 
-	<!-- Fixes the video autoplaying issues in Safari -->
+	<!-- Safari is faster with img tags for video, as per https://developer.apple.com/documentation/webkit/delivering_video_content_for_safari -->
 	<script>
-		/* From https://shaktisinghcheema.com/how-to-autoplay-video-on-mobile-devices-on-low-power-mode/ */
-		Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
-			get: function () {
-				return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
-			}
-		});
+		if (navigator.vendor && navigator.vendor.indexOf('Apple') > -1) { /* If Safari */
+			const appleVideoImage = document.createElement("img");
+			appleVideoImage.id = "banner";
+			appleVideoImage.src = "{{ banner_path | append: page.banner | append: '.mp4' | relative_url }}";
+			appleVideoImage.alt = "";
 
-		document.querySelector('body').addEventListener('click touchstart', function () {
-			const videoElement = document.getElementById('banner');
-			if (!videoElement.playing) {
-				videoElement.play();
-			}
-		});
+			document.getElementById("banner").replaceWith(appleVideoImage);
+		}
 	</script>
 
 	<!-- Updates scrolling attribute to change nav bar opacity -->
 	<script>
 		function scrollUpdate() {
-			if (document.getElementById("banner") != null) {  /* Required for Turbolinks */
+			if (document.getElementById("banner") != null) { /* Required for Turbolinks */
 				document.getElementsByTagName("nav")[0].id = this.scrollY > 0 ? "scrolled" : "";
 			}
 		}
