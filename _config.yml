@@ -4,8 +4,6 @@ permalink: /:title
 author: Gavin Douch
 author_url: https://gavindou.ch
 
-theme: null
-
 plugins:
   - jekyll-sitemap
 
