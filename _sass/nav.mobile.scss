@@ -14,8 +14,32 @@ nav {
 
 	> li {
 	  display: inline-block;
+	  vertical-align: middle;
 	  margin-right: 10px;
 	  margin-left: 10px;
+	  height: 100%;
+
+	  &#mobileLogo {
+		display: inline-block;
+		height: $nav_bar_height_mobile;
+		margin-left: 0;
+
+		a {
+		  padding-right: 0;
+
+		  &:hover, &.currentPage {
+			box-shadow: none;
+		  }
+
+		  img {
+			vertical-align: middle;
+			height: $nav_bar_height_mobile;
+
+			padding: 5px;
+			box-sizing: border-box;
+		  }
+		}
+	  }
 
 	  a {
 		padding: 0 10px;

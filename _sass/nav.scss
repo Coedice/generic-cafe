@@ -47,6 +47,10 @@ nav {
 	  height: 100%;
 	  margin-right: 20px;
 
+	  &#mobileLogo {
+		display: none;
+	  }
+
 	  > a {
 		text-decoration: none;
 		display: flex;
