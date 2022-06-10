@@ -9,20 +9,13 @@ h2 {
 
 #banner {
   height: 85%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-
-  > video {
-    object-fit: cover;
-    width: 100%;
-    min-height: 100%;
-    pointer-events: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-  }
+  object-fit: cover;
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
 }
 
 p, li:not(nav) {
