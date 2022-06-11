@@ -25,9 +25,9 @@
 
 <!-- Styles -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% for color_theme in site.data.themes.color_themes %}
-	{% if color_theme.name == site.data.brand.color_theme %}
-		<meta name="theme-color" content="{{ color_theme.background_color }}">
+{% for color_profile in site.data.profiles.color_profiles %}
+	{% if color_profile.name == site.data.brand.color_profile %}
+		<meta name="profile-color" content="{{ color_profile.background_color }}">
 	{% endif %}
 {% endfor %}
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">

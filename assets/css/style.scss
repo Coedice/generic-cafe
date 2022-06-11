@@ -1,24 +1,24 @@
 ---
 ---
 
-// Color themes
-{% for color_theme in site.data.themes.color_themes %}
-  {% if color_theme.name == site.data.brand.color_theme %}
-    $foreground-color: {{ color_theme.foreground_color }};
-    $background-color: {{ color_theme.background_color }};
-    $transparent-nav-bar-text-color: {{ color_theme.transparent_nav_bar_text_color }};
+// Color profiles
+{% for color_profile in site.data.profiles.color_profiles %}
+  {% if color_profile.name == site.data.brand.color_profile %}
+    $foreground-color: {{ color_profile.foreground_color }};
+    $background-color: {{ color_profile.background_color }};
+    $transparent-nav-bar-text-color: {{ color_profile.transparent_nav_bar_text_color }};
   {% endif %}
 {% endfor %}
 
-// Font themes
-{% for font_theme in site.data.themes.font_themes %}
-  {% if font_theme.name == site.data.brand.font_theme %}
-    {% if font_theme.font_url %}
-      @import url({{ font_theme.font_url }});
+// Font profiles
+{% for font_profile in site.data.profiles.font_profiles %}
+  {% if font_profile.name == site.data.brand.font_profile %}
+    {% if font_profile.font_url %}
+      @import url({{ font_profile.font_url }});
     {% endif %}
 
-    $title-font: {{ font_theme.title_font }};
-    $body-font: {{ font_theme.body_font }};
+    $title-font: {{ font_profile.title_font }};
+    $body-font: {{ font_profile.body_font }};
   {% endif %}
 {% endfor %}
 

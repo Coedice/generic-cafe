@@ -21,9 +21,9 @@
 <link rel="apple-touch-icon" sizes="152x152" href="{{ icons_path | append: 'favicon-152.png' | append: nonce | relative_url }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ icons_path | append: 'favicon-180.png' | append: nonce | relative_url }}">
 
-{% for color_theme in site.data.themes.color_themes %}
-	{% if color_theme.name == site.data.brand.color_theme %}
-		<meta name="msapplication-TileColor" content="{{ color_theme.background_color }}">
+{% for color_profile in site.data.profiles.color_profiles %}
+	{% if color_profile.name == site.data.brand.color_profile %}
+		<meta name="msapplication-TileColor" content="{{ color_profile.background_color }}">
 	{% endif %}
 {% endfor %}
 

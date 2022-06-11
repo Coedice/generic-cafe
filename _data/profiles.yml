@@ -1,4 +1,4 @@
-color_themes:
+color_profiles:
   - name: light
     foreground_color: black
     background_color: "#eeeeee"
@@ -12,7 +12,7 @@ color_themes:
     background_color: "#e2dbdd"
     transparent_nav_bar_text_color: "#e2dbdd"
 
-font_themes:
+font_profiles:
   - name: futuristic
     font_url: https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap
     title_font: '"Red Hat Display", "Century Gothic", Futura, "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif'
