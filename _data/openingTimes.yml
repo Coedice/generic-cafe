@@ -1,10 +1,9 @@
-times:
-  - days: Weekdays
-    open: 6:00 AM
-    close: 2:00 PM
-  - days: Weekends
-    open: 6:30 AM
-    close: 2:00 PM
-  - days: Public holidays
-    open: 7:00 AM
-    close: 2:00 PM
+- days: Weekdays
+  open: 6:00 AM
+  close: 2:00 PM
+- days: Weekends
+  open: 6:30 AM
+  close: 2:00 PM
+- days: Public holidays
+  open: 7:00 AM
+  close: 2:00 PM
