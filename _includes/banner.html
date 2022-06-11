@@ -9,7 +9,9 @@
 	<!-- Updates scrolling attribute to change nav bar opacity -->
 	<script>
 		function scrollUpdate() {
-			document.getElementsByTagName("nav")[0].id = this.scrollY > 0 ? "scrolled" : "";
+			if (document.getElementById("banner") != null) { /* Required for Turbolinks */
+				document.getElementsByTagName("nav")[0].id = this.scrollY > 0 ? "scrolled" : "";
+			}
 		}
 
 		window.addEventListener("scroll", scrollUpdate, false);
