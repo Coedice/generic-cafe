@@ -1,9 +1,8 @@
-pages:
-  - title: Home
-    url: /
-  - title: Menu
-    url: /menu
-  - title: Gallery
-    url: /gallery
-  - title: Contact
-    url: /contact
+- title: Home
+  url: /
+- title: Menu
+  url: /menu
+- title: Gallery
+  url: /gallery
+- title: Contact
+  url: /contact
