@@ -25,7 +25,7 @@
 
 <!-- Styles -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% for color_profile in site.data.profiles.color_profiles %}
+{% for color_profile in site.color_profiles %}
 	{% if color_profile.name == site.data.brand.color_profile %}
 		<meta name="profile-color" content="{{ color_profile.background_color }}">
 	{% endif %}

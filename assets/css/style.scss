@@ -2,7 +2,7 @@
 ---
 
 // Color profiles
-{% for color_profile in site.data.profiles.color_profiles %}
+{% for color_profile in site.color_profiles %}
   {% if color_profile.name == site.data.brand.color_profile %}
     $foreground-color: {{ color_profile.foreground_color }};
     $background-color: {{ color_profile.background_color }};
@@ -11,7 +11,7 @@
 {% endfor %}
 
 // Font profiles
-{% for font_profile in site.data.profiles.font_profiles %}
+{% for font_profile in site.font_profiles %}
   {% if font_profile.name == site.data.brand.font_profile %}
     {% if font_profile.font_url %}
       @import url({{ font_profile.font_url }});
