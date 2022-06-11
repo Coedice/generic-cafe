@@ -7,5 +7,4 @@
 - Favicon generator: [faviconit](http://faviconit.com/en)
 - Sitemap generator: [Jekyll Sitemap Generator Plugin](https://github.com/jekyll/jekyll-sitemap)
 - HTML minifier: [Compress HTML in Jekyll](http://jch.penibelst.de)
-- Turbolinks: [Turbolinks](https://github.com/turbolinks/turbolinks)
 - Fonts: [Google Fonts](https://fonts.google.com)
