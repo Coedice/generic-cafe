@@ -6,18 +6,6 @@
 		Your browser does not support the video tag.
 	</video>
 
-	<!-- Safari is faster with img tags for video, as per https://developer.apple.com/documentation/webkit/delivering_video_content_for_safari -->
-	<script>
-		if (navigator.vendor && navigator.vendor.indexOf('Apple') > -1) { /* If Safari */
-			const appleVideoImage = document.createElement("img");
-			appleVideoImage.id = "banner";
-			appleVideoImage.src = "{{ banner_path | append: page.banner | append: '.mp4' | relative_url }}";
-			appleVideoImage.alt = "";
-
-			document.getElementById("banner").replaceWith(appleVideoImage);
-		}
-	</script>
-
 	<!-- Updates scrolling attribute to change nav bar opacity -->
 	<script>
 		function scrollUpdate() {
