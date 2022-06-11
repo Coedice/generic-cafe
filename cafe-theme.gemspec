@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "cafe-theme"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["Gavin Douch"]
 
   spec.summary       = "A template website for a café."
