@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+{% if content != "" %}
+	<p>{{ content }}</p>
+{% endif %}
 <div id="menu">
 	{% assign has_vegan = false %}
 	{% assign has_gluten_free = false %}

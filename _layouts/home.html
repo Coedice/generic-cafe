@@ -1,7 +1,13 @@
 ---
 layout: default
 ---
-<p>{{ site.data.brand.description }}{% if site.data.production.demo %} This website is not the official website of {{ site.data.brand.name }}, it is a demo.{% endif %}</p>
+{% if site.data.production.demo %}
+	<p>This website is not the official website of {{ site.data.brand.name }}, it is a demo. This website will also not show up in search engine results.</p>
+{% endif %}
+<p>{{ site.data.brand.description }}</p>
+{% if content != "" %}
+	<p>{{ content }}</p>
+{% endif %}
 {% include reviews.html %}
 {% include map.html %}
 {% include openTimes.html %}

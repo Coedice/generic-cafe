@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+{% if content != "" %}
+	<p>{{ content }}</p>
+{% endif %}
 <div id="gallery">
 	{% for description in page.descriptions %}
 	<div onclick=""> <!-- onclick lets iOS recognise hover events -->

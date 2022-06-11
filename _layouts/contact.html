@@ -2,5 +2,8 @@
 layout: default
 ---
 {% include map.html %}
+{% if content != "" %}
+	<p>{{ content }}</p>
+{% endif %}
 {% include socials.html %}
 {% include openTimes.html %}
