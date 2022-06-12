@@ -7,8 +7,8 @@ layout: default
 <div id="gallery">
 	{% for description in page.descriptions %}
 	<div onclick=""> <!-- onclick lets iOS recognise hover events -->
-		<img src="{{ '/assets/images/gallery/' | append: forloop.index | append: '.webp' | relative_url }}" alt="{{ description }}"">
-		<p>{{ gallery_item.description }}</p>
+		<img src="{{ '/assets/images/gallery/' | append: forloop.index | append: '.webp' | relative_url }}" alt="{{ description }}">
+		<p>{{ description }}</p>
 	</div>
 	{% endfor %}
 </div>
