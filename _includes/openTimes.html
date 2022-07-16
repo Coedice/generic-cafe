@@ -1,6 +1,12 @@
 <div class="openingTimes">
   {% for day_of_week in site.data.openingTimes %}
     <p>{{ day_of_week.days }}:</p>
-    <p>{{ day_of_week.open }} - {{ day_of_week.close }}</p>
+    <p>
+      {% if day_of_week.open and day_of_week.close %}
+        {{ day_of_week.open }} - {{ day_of_week.close }}
+      {% else %}
+        Closed
+      {% endif %}
+    </p>
   {% endfor %}
 </div>
