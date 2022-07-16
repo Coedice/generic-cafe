@@ -1,3 +1,6 @@
+# To create .gem file:	gem build cafe-theme.gemspec
+# To publish gem:		gem push cafe-theme-<version>.gem
+
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
