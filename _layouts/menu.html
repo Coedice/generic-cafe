@@ -40,8 +40,10 @@ layout: default
 								{% endfor %}
 							</ul>
 						{% endif %}
-						{% assign slugified_food_name = food.name | slugify %}
-						<img src="{{ '/assets/images/menu/' | append: slugified_food_name | append: '.webp' | relative_url }}" alt="{{ food.name }}">
+						{% if page.images %}
+							{% assign slugified_food_name = food.name | slugify %}
+							<img src="{{ '/assets/images/menu/' | append: slugified_food_name | append: '.webp' | relative_url }}" alt="{{ food.name }}">
+						{% endif %}
 					</div>
 				{% endfor %}
 			{% endfor %}
@@ -51,10 +53,10 @@ layout: default
 {% if has_vegan or has_gluten_free %}
 <div id="menuKey">
 	{% if has_vegan %}
-	Vegan <img src="{{ '/assets/images/menu/diet/vegan.png' | relative_url }}" class="dietIcon" title="Vegan" alt="Vegan">
+		Vegan <img src="{{ '/assets/images/menu/diet/vegan.png' | relative_url }}" class="dietIcon" title="Vegan" alt="Vegan">
 	{% endif %}
 	{% if has_gluten_free %}
-	Gluten free <img src="{{ '/assets/images/menu/diet/glutenFree.png' | relative_url }}" class="dietIcon" title="Gluten free" alt="Gluten free">
+		Gluten free <img src="{{ '/assets/images/menu/diet/glutenFree.png' | relative_url }}" class="dietIcon" title="Gluten free" alt="Gluten free">
 	{% endif %}
 </div>
 {% endif %}
