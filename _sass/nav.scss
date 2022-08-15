@@ -28,7 +28,17 @@ nav {
 	}
   }
 
-  &#scrolled, &:hover {
+  @if $permanent_nav_background == false {
+	&#scrolled, &:hover {
+	  background-color: transparentize($background-color, $opacity);
+
+	  a {
+		color: $foreground-color;
+		text-shadow: 0 0 5px transparent;
+	  }
+	}
+  }
+  @else {
 	background-color: transparentize($background-color, $opacity);
 
 	a {

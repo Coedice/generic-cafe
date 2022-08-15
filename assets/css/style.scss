@@ -25,6 +25,7 @@
 $accent-color: {{ site.data.brand.accent_color }};
 $opacity: 0.3;
 $border-radius: 10px;
+$permanent_nav_background: {{ site.data.brand.permanent_nav_background }};
 
 @import "main";
 @import "nav";

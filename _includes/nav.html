@@ -1,4 +1,4 @@
-<nav {% if page.banner %}{% else %}id="scrolled"{% endif %}>
+<nav {% unless page.banner %}id="scrolled"{% endunless %}>
 	<a id="title" href="{{ '/' | relative_url }}">
 		<img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="{{ site.data.brand.name }} logo">
 		<span>{{ site.data.brand.name }}{% if site.data.production.demo %} - Unofficial{% endif %}</span>
