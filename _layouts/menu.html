@@ -14,7 +14,7 @@ layout: default
 		{% endunless %}
 		<h1>{{ section.title | upcase }}</h1>
 		<p>{{ section.time }}</p>
-		<div id="{{ menu.title }}">
+		<div id="{{ section.title }}">
 			{% for heading in section.headings %}
 				{% if heading.name %}
 					<h2>{{ heading.name }}</h2>
