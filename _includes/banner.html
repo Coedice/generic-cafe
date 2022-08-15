@@ -1,9 +1,11 @@
 {% if page.banner %}
 	{% assign banner_path = "/assets/images/banners/" | append: page.banner  | append: "/" | append: page.banner %}
 	<video id="banner" autoplay loop muted playsinline poster="{{ banner_path | append: '.webp' | relative_url }}" style="background-image: url({{ banner_path | append: '.webp' | relative_url }});">
-		<source src="{{ banner_path | append: '.webm' | relative_url }}" type="video/webm">
-		<source src="{{ banner_path | append: '.mp4' | relative_url }}" type="video/mp4">
-		Your browser does not support the video tag.
+		{% if page.banner_video %}
+			<source src="{{ banner_path | append: '.webm' | relative_url }}" type="video/webm">
+			<source src="{{ banner_path | append: '.mp4' | relative_url }}" type="video/mp4">
+			Your browser does not support the video tag.
+		{% endif %}
 	</video>
 
 	<!-- Updates scrolling attribute to change nav bar opacity -->
