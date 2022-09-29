@@ -69,8 +69,10 @@ nav {
 		height: 100%;
 		padding: 0 10px;
 		transition: box-shadow 0.2s, color 0.2s, text-shadow, 0.2s;
-		color: $transparent-nav-bar-text-color;
-		text-shadow: 0 0 5px invert(grayscale($transparent-nav-bar-text-color));
+		@if $permanent_nav_background == false {
+		  color: $transparent-nav-bar-text-color;
+		  text-shadow: 0 0 5px invert(grayscale($transparent-nav-bar-text-color));
+		}
 
 		&:hover, &.currentPage {
 		  box-shadow: 0 -5px $accent-color inset;
