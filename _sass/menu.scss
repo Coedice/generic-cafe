@@ -57,7 +57,7 @@
 		margin-bottom: 5px;
 		line-height: 26px;
 
-		span {
+		span.foodPrice {
 		  position: absolute;
 		  right: 0;
 		  padding-right: 10px;
@@ -103,7 +103,29 @@
 }
 
 .dietIcon {
-  height: 1em;
+  font-style: italic;
+  font-weight: normal;
+  margin-left: 10px;
+
+  &.v, &.vo {
+	color: lightgreen;
+  }
+
+  &.vg, &.vgo {
+	color: green;
+  }
+
+  &.gf, &.gfo {
+	color: yellow;
+  }
+
+  &.p, &.po {
+	color: cornflowerblue;
+  }
+
+  &.df, &.dfo {
+	color: brown;
+  }
 }
 
 #warning {

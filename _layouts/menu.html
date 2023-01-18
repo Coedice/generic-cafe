@@ -5,8 +5,13 @@ layout: default
 	<p>{{ content }}</p>
 {% endif %}
 <div id="menu">
-	{% assign has_vegan = false %}
-	{% assign has_gluten_free = false %}
+	{% assign has_diet_v = false %}
+	{% assign has_diet_vo = false %}
+	{% assign has_diet_vg = false %}
+	{% assign has_diet_vgo = false %}
+	{% assign has_diet_gf = false %}
+	{% assign has_diet_pesc = false %}
+	{% assign has_diet_df = false %}
 
 	{% for section in page.sections %}
 		{% unless forloop.first %}
@@ -22,7 +27,43 @@ layout: default
 				{% for food in heading.foods %}
 					<div onclick=""> <!-- onclick lets iOS recognise hover events -->
 						<h2>{{ food.name }}
-							<span>${{ food.price }}</span>
+							<span class="foodPrice">${{ food.price }}</span>
+							{% for diet in food.diets %}
+								{% if diet == "v" %}
+									{% assign diet_name = "Vegetarian" %}
+									{% assign has_diet_v = true %}
+								{% elsif diet == "vo" %}
+									{% assign diet_name = "Vegetarian option" %}
+									{% assign has_diet_vo = true %}
+								{% elsif diet == "vg" %}
+									{% assign diet_name = "Vegan" %}
+									{% assign has_diet_vg = true %}
+								{% elsif diet == "vgo" %}
+									{% assign diet_name = "Vegan option" %}
+									{% assign has_diet_vgo = true %}
+								{% elsif diet == "gf" %}
+									{% assign diet_name = "Gluten Free" %}
+									{% assign has_diet_gf = true %}
+								{% elsif diet == "gfo" %}
+									{% assign diet_name = "Gluten Free option" %}
+									{% assign has_diet_gfo = true %}
+								{% elsif diet == "p" %}
+									{% assign diet_name = "Pescatarian" %}
+									{% assign has_diet_p = true %}
+								{% elsif diet == "po" %}
+									{% assign diet_name = "Pescatarian option" %}
+									{% assign has_diet_po = true %}
+								{% elsif diet == "df" %}
+									{% assign diet_name = "Dairy free" %}
+									{% assign has_diet_df = true %}
+								{% elsif diet == "dfo" %}
+									{% assign diet_name = "Dairy free option" %}
+									{% assign has_diet_dfo = true %}
+								{% endif %}
+
+								<span class="dietIcon {{ diet }}" title="{{ diet_name }}">{{ diet }}</span>
+							{% endfor %}
+
 							{% if food.vegan %}
 								{% assign has_vegan = true %}
 								<img src="{{ '/assets/images/menu/diet/vegan.png' | relative_url }}" class="dietIcon" title="Vegan" alt="Vegan">
@@ -50,15 +91,39 @@ layout: default
 		</div>
 	{% endfor %}
 </div>
-{% if has_vegan or has_gluten_free %}
-<div id="menuKey">
-	{% if has_vegan %}
-		Vegan <img src="{{ '/assets/images/menu/diet/vegan.png' | relative_url }}" class="dietIcon" title="Vegan" alt="Vegan">
-	{% endif %}
-	{% if has_gluten_free %}
-		Gluten free <img src="{{ '/assets/images/menu/diet/glutenFree.png' | relative_url }}" class="dietIcon" title="Gluten free" alt="Gluten free">
-	{% endif %}
-</div>
+{% if has_diet_v or has_diet_vo or has_diet_vg or has_diet_vgo or has_diet_gf or has_diet_gfo or has_diet_p or has_diet_po or has_diet_df or has_diet_dfo %}
+	<div id="menuKey">
+		{% if has_diet_v %}
+			<span class="dietIcon v">v</span>: Vegetarian
+		{% endif %}
+		{% if has_diet_vo %}
+			<span class="dietIcon vo">vo</span>: Vegetarian option
+		{% endif %}
+		{% if has_diet_vg %}
+			<span class="dietIcon vg">vg</span>: Vegan
+		{% endif %}
+		{% if has_diet_vgo %}
+			<span class="dietIcon vgo">vgo</span>: Vegan option
+		{% endif %}
+		{% if has_diet_gf %}
+			<span class="dietIcon gf">gf</span>: Gluten Free
+		{% endif %}
+		{% if has_diet_gfo %}
+			<span class="dietIcon gfo">gfo</span>: Gluten Free option
+		{% endif %}
+		{% if has_diet_p %}
+			<span class="dietIcon p">p</span>: Pescatarian
+		{% endif %}
+		{% if has_diet_po %}
+			<span class="dietIcon po">po</span>: Pescatarian option
+		{% endif %}
+		{% if has_diet_df %}
+			<span class="dietIcon df">df</span>: Dairy free
+		{% endif %}
+		{% if has_diet_dfo %}
+			<span class="dietIcon dfo">dfo</span>: Dairy free option
+		{% endif %}
+	</div>
 {% endif %}
 {% if page.warning %}
 	<p id="warning">{{ page.warning }}</p>
