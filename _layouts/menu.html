@@ -42,10 +42,10 @@ layout: default
 									{% assign diet_name = "Vegan option" %}
 									{% assign has_diet_vgo = true %}
 								{% elsif diet == "gf" %}
-									{% assign diet_name = "Gluten Free" %}
+									{% assign diet_name = "Gluten free" %}
 									{% assign has_diet_gf = true %}
 								{% elsif diet == "gfo" %}
-									{% assign diet_name = "Gluten Free option" %}
+									{% assign diet_name = "Gluten free option" %}
 									{% assign has_diet_gfo = true %}
 								{% elsif diet == "p" %}
 									{% assign diet_name = "Pescatarian" %}
@@ -106,10 +106,10 @@ layout: default
 			<span class="dietIcon vgo">vgo</span>: Vegan option
 		{% endif %}
 		{% if has_diet_gf %}
-			<span class="dietIcon gf">gf</span>: Gluten Free
+			<span class="dietIcon gf">gf</span>: Gluten free
 		{% endif %}
 		{% if has_diet_gfo %}
-			<span class="dietIcon gfo">gfo</span>: Gluten Free option
+			<span class="dietIcon gfo">gfo</span>: Gluten free option
 		{% endif %}
 		{% if has_diet_p %}
 			<span class="dietIcon p">p</span>: Pescatarian
