@@ -18,7 +18,10 @@
   > p {
 	text-align: center;
 	margin-top: 0;
-	color: $accent_color;
+
+	&, & > * {
+	  color: $accent_color;
+	}
   }
 
   > div { // Foods list
