@@ -27,7 +27,10 @@ layout: default
 				{% for food in heading.foods %}
 					<div onclick=""> <!-- onclick lets iOS recognise hover events -->
 						<h2>{{ food.name }}
-							<span class="foodPrice">${{ food.price }}</span>
+							{% if food.price %}
+								<span class="foodPrice">${{ food.price }}</span>
+							{% endif %}
+
 							{% for diet in food.diets %}
 								{% if diet == "v" %}
 									{% assign diet_name = "Vegetarian" %}
@@ -77,7 +80,7 @@ layout: default
 						{% if food.options.size > 0 %}
 							<ul>
 								{% for option in food.options %}
-									<li>{{ option.name }}<span>${{ option.price }}</span></li>
+									<li>{{ option.name }}{% if option.price %}<span>${{ option.price }}</span>{% endif %}</li>
 								{% endfor %}
 							</ul>
 						{% endif %}
