@@ -1,0 +1,10 @@
+Gemfile.lock
+*.gem
+notes.md
+.idea
+*.pxm
+*.pxd
+.jekyll-cache
+_site
+_drafts
+.DS_Store

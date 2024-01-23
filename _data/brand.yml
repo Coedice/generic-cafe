@@ -1,6 +1,6 @@
 name: Generic Café
 description: A template website for a café.
-color_profile: dark  # options: light, dark, pink
-font_profile: futuristic  # options: futuristic, rustic, cursive, formal
+color_profile: dark # options: light, dark, pink
+font_profile: futuristic # options: futuristic, rustic, cursive, formal
 accent_color: "#b12b2b"
 permanent_nav_background: false
